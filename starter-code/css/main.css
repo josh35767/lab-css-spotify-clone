@@ -6,6 +6,9 @@ Green: #00B172
 White: #FFF
 
 */
+html {
+  font-size: 16px;
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -32,15 +35,19 @@ header > nav {
   margin-right: 20px;
 }
 
-header > nav > a {
+header a {
   margin-right: 35px;
+}
+
+header a:hover {
+  text-decoration: underline;
 }
 
 .main-box {
   background-image: url(../images/landing.jpg);
   background-size: cover;
   background-position:  center center;
-  height: 100vh;
+  height: 850px;
   width: 100%;
 }
 
@@ -135,21 +142,40 @@ header > nav > a {
 
 .green-box > h3 {
   clear: both;
+  overflow: visible;
   margin: 0;
   font-size: 2.2em;
   font-weight: bold;
-  padding-bottom: 8px;
+  padding-bottom: 3px;
   display: inline;
   border-bottom: 4px solid white;
 }
 
-.green-box > .green-box-text > h4 {
+.green-box  h4 {
   margin: 40px 0;
   font-size: 1.7em;
 }
 
-.green-box > .green-box-text > p {
+.green-box p {
   font-size: 1.5em;
   font-weight: lighter;
   width: 30%;
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 16px;
+  }
+  .main-box-text {
+    padding-top: 30%;
+  }
+  .green-box {
+    background-image: none;
+  }
+  .app-image {
+    display: none;
+  }
+  .green-box h4, .green-box p {
+    width: 100%;
+  }
 }
